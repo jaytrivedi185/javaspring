@@ -22,6 +22,9 @@ public class RewardController {
         rewardList.add(new Reward(currentId++, "Silver Medal", 50.0, "Silver medal reward"));
     }
 
+
+
+    
     // VIEW all rewards
     @GetMapping
     public String viewRewards(Model model) {
