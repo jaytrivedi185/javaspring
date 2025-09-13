@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Reward</title>
+</head>
+<body>
+<h1>Edit Reward</h1>
+<form th:action="@{/rewards/save}" th:object="${reward}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    Name: <input type="text" th:field="*{name}" /><br>
+    Price: <input type="number" th:field="*{price}" step="0.01" /><br>
+    Description: <input type="text" th:field="*{description}" /><br>
+    <button type="submit">Update</button>
+</form>
+<a href="/rewards">Back</a>
+</body>
+</html>
